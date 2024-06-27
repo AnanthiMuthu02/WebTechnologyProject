@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Playwrite US Trad", cursive;
+}
+.main-nav{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content: space-between;
+    position:fixed;
+    z-index: 1;
+    background-color: rgb(254, 236, 214);
+    color:rgb(120, 56, 120);
+   
+    padding-bottom:0;
+    
+}
+.main-recipe{
+    text-align:center;
+    padding-top:150px;
+}
+.main-image{
+    width:300px;
+    height:300px;
+}
+.title{
+    font-size: 1.5rem;
+   
+}
+img{
+    width:50;
+    height:50px;
+    padding-top: 0;
+}
+.nav-container1{
+    display:flex;
+    gap:50px;
+    
+}
+.flexlist{
+    display:flex;
+   gap:50px;
+   font-size:1rem;
+   color:rgb(120, 56, 120) !important;
+
+}
+a{
+    color:rgb(120, 56, 120) !important;
+    text-decoration: none;
+}
+a:hover{
+   font-weight: bold;
+   font-size:1.5rem;
+   
+}
+li{
+    list-style-type: none;
+}
+footer{
+    width:100%;
+    height:100px;
+    background-color:rgb(120, 56, 120) ;
+    color:white;
+    margin-top:6rem;
+    padding-top:3rem;
+    text-align:center;
+    position:relative;
+
+
+}
+.heading{
+    width:100px;
+    height:50px;
+    color:rgb(120, 56, 120);
+}
+.footer-main{
+    position:absolute;
+    top:30px;
+    left:38%;
+}
+section{
+    margin-top: 6rem;
+}
+.btn{
+    
+    width:fit-content;
+    padding:0.5rem 1rem;
+    border-radius: 15px;
+    background-color: rgb(120, 56, 120) ;
+    font-weight: 500;
+    cursor: pointer;
+    color:white !important;
+}
+.error-main{
+    text-align: center;
+    padding-top:5rem;
+    margin-inline: center;
+    display:block;
+    width:100%;
+}
+
+.error-main h2{
+    margin-top:3rem;
+}
+.recipebox{
+  width:100%;
+  padding:100px;
+  background-color: rgb(120, 56, 120);
+  margin-bottom: 50px;
+
+  
+
+}
+
+.recipeimg{
+    width:400px;
+    height:200px;
+    border-radius:20px;
+   
+}
+.recipeimg-container{
+    width:400px;
+    height:500px;
+    background-color: rgb(254, 236, 214);
+    color:rgb(120, 56, 120);
+    text-align: center;
+    border-radius:20px;
+    margin:auto;
+}
+.recipebtn{
+    width:100px;
+    height:30px;
+    border:1px solid black;
+    background-color:rgb(120, 56, 120);
+    color:white !important;
+    font-weight: bold;
+    border:none;
+    border-radius:15px;
+    
+}
