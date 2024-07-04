@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap');
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
 }
 body{
-    font-family: "Playwrite US Trad", cursive;
+    font-family: "Playwrite MX", cursive;
 }
 .main-nav{
     width:100%;
@@ -13,6 +13,8 @@ body{
     display:flex;
     justify-content: space-between;
     position:fixed;
+    position:relative;
+    top:0;
     z-index: 1;
     background-color: rgb(254, 236, 214);
     color:rgb(120, 56, 120);
@@ -22,7 +24,20 @@ body{
 }
 .main-recipe{
     text-align:center;
-    padding-top:150px;
+    padding-top:50px;
+   
+}
+.sub-recipe{
+    width:70%;
+   
+    margin:auto;
+    background-color:white;
+    line-height: 40px;
+    border:1px solid black;
+    border-radius:15px;
+    border:none;
+    box-shadow: 2px 2px 1px 1px beige;
+    padding:5px;
 }
 .main-image{
     width:300px;
@@ -40,8 +55,17 @@ img{
 .nav-container1{
     display:flex;
     gap:50px;
+    position:absolute;
+    top:10px;
     
 }
+.nav-container2{
+    position:absolute;
+    top:20px;
+    right:0px;
+    font-size:1.3rem !important;
+}
+
 .flexlist{
     display:flex;
    gap:50px;
@@ -63,13 +87,14 @@ li{
 }
 footer{
     width:100%;
-    height:100px;
-    background-color:rgb(120, 56, 120) ;
-    color:white;
+    height:50px;
+    background-color:rgb(254, 236, 214);
+    color:rgb(120, 56, 120) !important;
     margin-top:6rem;
     padding-top:3rem;
     text-align:center;
-    position:relative;
+   position:fixed;
+   bottom:0;
 
 
 }
@@ -80,8 +105,9 @@ footer{
 }
 .footer-main{
     position:absolute;
-    top:30px;
+    top:10px;
     left:38%;
+    font-weight: bold;
 }
 section{
     margin-top: 6rem;
@@ -109,9 +135,10 @@ section{
 }
 .recipebox{
   width:100%;
-  padding:100px;
+  padding:50px;
   background-color: rgb(120, 56, 120);
   margin-bottom: 50px;
+
 
   
 
@@ -131,6 +158,7 @@ section{
     text-align: center;
     border-radius:20px;
     margin:auto;
+    line-height: 30px;
 }
 .recipebtn{
     width:100px;
@@ -142,4 +170,82 @@ section{
     border:none;
     border-radius:15px;
     
+}
+.span-head{
+    font-weight: bold;
+    font-size:1.5rem;
+}
+.register-main{
+    width:100%;
+   
+    
+}
+.log-main{
+    width:100%;
+}
+.create.recipe{
+    width:100%;
+}
+.reg-sub{
+    width:30%;
+    height:400px;
+    background-color: white;
+    line-height: 50px;
+    text-align: center;
+    border-radius:15px;
+    box-shadow: 5px 5px 10px 5px lightgray;
+   
+    margin:auto;
+}
+.recipe-container{
+    width:30%;
+    height:400px;
+    background-color: white;
+    line-height: 50px;
+    text-align: center;
+    border-radius:15px;
+    box-shadow: 5px 5px 10px 5px lightgray;
+   
+    margin:auto;
+}
+.log-sub{
+    width:30%;
+    height:400px;
+    background-color: white;
+    line-height: 50px;
+    text-align: center;
+    border-radius:15px;
+    box-shadow: 5px 5px 10px 5px lightgray;
+   
+    margin:auto;
+
+}
+textarea{
+    width:300px; 
+    height:50px;
+    border-radius:2px;
+    border:none;
+    
+    background-color:rgb(236, 213, 236);
+
+}
+input{
+   width:300px; 
+    height:30px;
+    border-radius:10px;
+    border:none;
+    
+    background-color:rgb(236, 213, 236);
+}
+.file , .rectitle{
+    border-radius:0px !important;
+}
+.regbtn{
+    color:white;
+    background-color:rgb(34, 34, 187);
+    width:100px;
+    height:30px;
+    border:none;
+    border-radius:10px;
+
 }
