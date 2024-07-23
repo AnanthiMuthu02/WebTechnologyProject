@@ -7,8 +7,8 @@ import Layout from './components/layout';
 import ErrorPage from './pages/errorPage';
 import Home from './pages/home';
 import RecipeDetail from './pages/RecipeDetail';
-import CreateRecipe from './pages/CreateRecipe';
-import Login from './pages/Login';
+import CreateRecipe from './pages/createrecipe';
+import Login from './pages/login';
 import Register from './pages/Register';
 
 const router = createBrowserRouter([

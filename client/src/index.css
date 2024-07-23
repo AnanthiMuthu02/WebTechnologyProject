@@ -18,7 +18,6 @@ body{
     z-index: 1;
     background-color: rgb(254, 236, 214);
     color:rgb(120, 56, 120);
-   
     padding-bottom:0;
     
 }
@@ -57,12 +56,11 @@ img{
     gap:50px;
     position:absolute;
     top:10px;
-    
 }
 .nav-container2{
     position:absolute;
     top:20px;
-    right:0px;
+    right:10px;
     font-size:1.3rem !important;
 }
 
@@ -152,7 +150,7 @@ section{
 }
 .recipeimg-container{
     width:400px;
-    height:500px;
+    /* height:500px; */
     background-color: rgb(254, 236, 214);
     color:rgb(120, 56, 120);
     text-align: center;
@@ -176,9 +174,7 @@ section{
     font-size:1.5rem;
 }
 .register-main{
-    width:100%;
-   
-    
+    width:100%;    
 }
 .log-main{
     width:100%;
@@ -188,7 +184,7 @@ section{
 }
 .reg-sub{
     width:30%;
-    height:400px;
+    /* height:400px; */
     background-color: white;
     line-height: 50px;
     text-align: center;
@@ -199,18 +195,16 @@ section{
 }
 .recipe-container{
     width:30%;
-    height:400px;
     background-color: white;
     line-height: 50px;
     text-align: center;
     border-radius:15px;
     box-shadow: 5px 5px 10px 5px lightgray;
-   
     margin:auto;
 }
 .log-sub{
     width:30%;
-    height:400px;
+    /* height:400px; */
     background-color: white;
     line-height: 50px;
     text-align: center;

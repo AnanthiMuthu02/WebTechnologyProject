@@ -3,7 +3,7 @@ import ListRecipe from '../components/ListRecipe'
 
 const home = () => {
   return (
-   <ListRecipe />
+    <ListRecipe />
   )
 }
 
