@@ -12,7 +12,7 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 const app = express();
 
 // CORS configuration
-const allowedOrigins = ['http://localhost:3000', 'https://vercel-url.com'];
+const allowedOrigins = ['http://localhost:3000', 'https://recepie-web-app.vercel.app'];
 
 app.use(cors({
   credentials: true,
