@@ -12,7 +12,7 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 const app = express();
 
 // CORS configuration
-const allowedOrigins = ['http://localhost:3000', 'https://recepie-web-app.vercel.app'];
+const allowedOrigins = ['http://localhost:3000', 'https://recepie-web-app.vercel.app'., 'https://recepie-web-app.vercel.app/' ];
 
 app.use(cors({
   credentials: true,
@@ -23,7 +23,7 @@ app.use(cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
