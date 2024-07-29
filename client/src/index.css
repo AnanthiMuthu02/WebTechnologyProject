@@ -228,11 +228,24 @@ input{
     height:30px;
     border-radius:10px;
     border:none;
-    
     background-color:rgb(236, 213, 236);
 }
 .file , .rectitle{
     border-radius:0px !important;
+}
+.log-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.reg-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 .regbtn{
     color:white;
@@ -241,5 +254,8 @@ input{
     height:30px;
     border:none;
     border-radius:10px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }

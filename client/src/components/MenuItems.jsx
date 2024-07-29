@@ -7,7 +7,7 @@ const MenuItems = ({ postId, img, RecipeName, Description }) => {
   const handleLinkClick = (e) => {
     if (!postId) {
       e.preventDefault();
-      toast.info('This is dummy data. To get original data, please login.', {
+      toast.info('Please Login to VIew Recepies', {
         position: "top-center",
         autoClose: 2000, // Duration of the toast
         hideProgressBar: true,

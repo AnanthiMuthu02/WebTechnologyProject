@@ -10,6 +10,7 @@ import RecipeDetail from './pages/RecipeDetail';
 import CreateRecipe from './pages/createrecipe';
 import Login from './pages/login';
 import Register from './pages/Register';
+import VerifyOtp from './pages/verifyOtp';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       {path:"recipes/:id" , element:<RecipeDetail />},
       {path:"createrecipe" , element:<CreateRecipe />},
       {path:"login" , element:<Login />},
+      { path:"verify-otp" , element:<VerifyOtp />},
       
       {path:"signup" , element:<Register />}
     ]

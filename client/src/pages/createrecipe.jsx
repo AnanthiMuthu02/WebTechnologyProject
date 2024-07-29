@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
 import { API_CONSTANTS } from '../components/API'
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Oval } from 'react-loader-spinner'; // Importing the loader
 
 const CreateRecipe = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const formik = useFormik({
     initialValues: {
       title: '',
@@ -41,9 +45,16 @@ const CreateRecipe = () => {
           console.log('Recipe created successfully', response.data)
           // Handle success (e.g., show a success message, redirect to another page, etc.)
           navigate('/');
+          toast.success(response.data.message);
         })
         .catch(error => {
           console.error('Error creating recipe', error)
+          if (error.response && error.response.status === 403) {
+            toast.error("Please login first.");
+          } else {
+            // Default error message handling
+            toast.error(error.response.data.message);
+          }
           // Handle error (e.g., show an error message)
         })
     }
@@ -117,6 +128,7 @@ const CreateRecipe = () => {
           <button type="submit" className="createrecipe">Create Recipe</button><br />
         </form>
       </div>
+      <ToastContainer />
     </section>
   )
 }

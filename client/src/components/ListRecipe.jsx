@@ -3,10 +3,14 @@ import MenuItems from './MenuItems';
 import axios from 'axios';
 import { API_CONSTANTS } from './API';
 import { DUMMY_RECIPES } from '../data';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Oval } from 'react-loader-spinner'; // Importing the loader
 
 const ListRecipe = () => {
   const [recipesDummy, setRecipesDummy] = useState(DUMMY_RECIPES);
   const [recipes, setRecipes] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     getItems();
@@ -30,6 +34,7 @@ const ListRecipe = () => {
 
     if (token) {
       try {
+        setIsLoading(true);
         const response = await axios.get(`${API_CONSTANTS.BASEURL}api/recipes`, {
           headers: {
             'Content-Type': 'multipart/form-data',
@@ -37,38 +42,54 @@ const ListRecipe = () => {
           }
         });
         setRecipes(response.data.recipes);
+        setIsLoading(false);
       } catch (error) {
         console.error('Error fetching recipes:', error);
+        if (error.response && error.response.status === 403) {
+          toast.error("Please login first.");
+        } else {
+          // Default error message handling
+          toast.error(error.response ? error.response.data.message : 'Network error');
+        }
+        setIsLoading(false);
       }
     } else {
       console.error('No token available for authentication');
+      setIsLoading(false);
     }
   };
 
   return (
     <div className='recipes'>
-      {recipes && recipes.length > 0 ? (
-        recipes.map((data) => (
-          <MenuItems
-            key={data._id}
-            id={data._id}
-            postId={data._id}
-            img={data.thumbnail}
-            RecipeName={data.title}
-            Description={data.description}
-          />
-        ))
+      {isLoading ? (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+          <Oval color="#00BFFF" height={50} width={50} />
+        </div>
       ) : (
-        recipesDummy.map((data) => (
-          <MenuItems
-            key={data.id}
-            id={data.id}
-            img={data.img}
-            RecipeName={data.title}
-            Description={data?.Description}
-          />
-        ))
+        recipes && recipes.length > 0 ? (
+          recipes.map((data) => (
+            <MenuItems
+              key={data._id}
+              id={data._id}
+              postId={data._id}
+              img={data.thumbnail}
+              RecipeName={data.title}
+              Description={data.description}
+            />
+          ))
+        ) : (
+          recipesDummy.map((data) => (
+            <MenuItems
+              key={data.id}
+              id={data.id}
+              img={data.img}
+              RecipeName={data.title}
+              Description={data?.Description}
+            />
+          ))
+        )
       )}
+      <ToastContainer />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 export const API_CONSTANTS = {
     // base URL
-    BASEURL: "https://recepie-web-app.vercel.app/",
+    BASEURL: "http://127.0.0.1:8080/",
     // headers
     headers: () => {
         return {
